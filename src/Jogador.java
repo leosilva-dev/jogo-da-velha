@@ -2,17 +2,9 @@ public class Jogador {
     private String nome;
     private int pontos;
 
-    Jogador(String nome, int pontos){
+    Jogador(String nome){
         this.setNome(nome);
-        this.setPontos(pontos);
-    }
-
-    public int getPontos() {
-        return pontos;
-    }
-
-    public void setPontos(int pontos) {
-        this.pontos = pontos;
+        this.pontos = 0;
     }
 
     public String getNome() {
@@ -21,5 +13,17 @@ public class Jogador {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public int getPontos() {
+        return pontos;
+    }
+
+    public void pontua(){
+        this.pontos = this.pontos + 1;
+    }
+
+    public String toString(){
+        return "Jogador: " + nome + " | " + "Pontos: " + pontos; 
     }
 }
