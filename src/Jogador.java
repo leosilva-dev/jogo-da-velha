@@ -1,10 +1,20 @@
 public class Jogador {
     private String nome;
     private int pontos;
+    private char caracter;
 
-    Jogador(String nome){
+    Jogador(String nome, char caracter){
         this.setNome(nome);
+        this.setCaracter(caracter);
         this.pontos = 0;
+    }
+
+    public char getCaracter() {
+        return caracter;
+    }
+
+    public void setCaracter(char caracter) {
+        this.caracter = caracter;
     }
 
     public String getNome() {
@@ -24,6 +34,6 @@ public class Jogador {
     }
 
     public String toString(){
-        return "Jogador: " + nome + " | " + "Pontos: " + pontos; 
+        return "Jogador: " + nome + " - " + caracter + " | " + "Pontos: " + pontos; 
     }
 }
